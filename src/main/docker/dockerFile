@@ -1,0 +1,14 @@
+FROM java:8
+#指定维护者信息
+MAINTAINER cyy
+#
+VOLUME /home/logs
+#ADD ./target/classes/com/cyy/day/controller/TestDockerController.class /home/TestDockerController.class
+ADD ../../../target/day-0.0.1-SNAPSHOT.jar /home/day-0.0.1-SNAPSHOT.jar
+#RUN /bin/bash -c 'source $HOME/.bashrc; jar cvf /home/day-0.0.1-SNAPSHOT.jar /home/TestDockerController.class'
+
+ENV JAVA_OPTS=""
+#暴露端口
+EXPOSE 9999
+#指定执行启动     ENTRYPOINT 为容器启动后执行的命令
+ENTRYPOINT ["java","-jar","/home/day-0.0.1-SNAPSHOT.jar"]
