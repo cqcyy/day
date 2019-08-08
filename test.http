@@ -1,9 +1,8 @@
-GET http://127.0.0.1:9999/TestDocker/success
-
+GET http://127.0.0.1:9999/day/success
 
 ###
 
-GET http://localhost:8081/test/
+GET http://127.0.0.1:8080/day/success
 
 ###
 GET http://localhost:8081/index.html

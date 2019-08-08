@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>xxx</title>
-    <script src="/static/vue.js"></script>
-    <script src="/static/axios.js"></script>
+    <script src="lib/vue.js"></script>
+    <script src="lib/axios.js"></script>
 </head>
 <body>
 <div id="app-6">
@@ -12,15 +12,13 @@
     <input v-model="message">
 </div>
 <script>
-    //http://127.0.0.1:8081/TestDocker/success
-    //http://127.0.0.1:9999/TestDocker/success
     var app6 = new Vue({
         el: '#app-6',
         data: {
             message: 'Hello Vue!'
         },
         mounted () {
-            axios.get('/TestDocker/success').then(
+            axios.get('/day/success').then(
                 response => (
                     this.message = response.data.success
             )

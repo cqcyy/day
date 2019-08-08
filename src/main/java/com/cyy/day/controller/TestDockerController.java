@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@CrossOrigin
 @RestController
-@RequestMapping("/TestDocker")
+@RequestMapping("/day")
 public class TestDockerController {
    private static final Logger logger = LoggerFactory.getLogger(TestDockerController.class);
     @RequestMapping(value = "/success",method={RequestMethod.GET})
