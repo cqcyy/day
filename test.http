@@ -1,0 +1,14 @@
+GET http://127.0.0.1:9999/TestDocker/success
+
+
+###
+
+GET http://localhost:8081/test/
+
+###
+GET http://localhost:8081/index.html
+
+###
+GET http://localhost:8081/
+
+###
