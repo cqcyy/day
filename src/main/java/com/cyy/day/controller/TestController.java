@@ -1,21 +1,16 @@
 package com.cyy.day.controller;
 
 import com.cyy.day.util.ResponseUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.cyy.day.vo.ResponseVo;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/day")
 public class TestController {
-   private static final Logger logger = LoggerFactory.getLogger(TestController.class);
     @RequestMapping(value = "/success",method={RequestMethod.GET})
-    public Object success() {
-        Map map = new HashMap();
-        map.put("success", "获取数据成功！");
+    public ResponseVo success() {
         return ResponseUtil.ok("获取数据成功！");
     }
 }
