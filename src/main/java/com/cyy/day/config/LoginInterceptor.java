@@ -1,5 +1,6 @@
 package com.cyy.day.config;
 
+import com.cyy.day.exception.LoginException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -16,8 +17,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             return true;
         } else {
             //校验登陆
-
-            return false;
+            throw new LoginException(4001,"没有登陆",LoginInterceptor.class+"=>preHandle()");
         }
     }
 

@@ -34,7 +34,7 @@
             count:0,
             show: true
         },mounted () {
-            axios.get('http://localhost:9999/day/success').then(response=>{
+            axios.get('http://localhost:8089/day/success').then(response=>{
                 this.message = response.data.success;
             }).catch(error=>{
                 this.message = "error";

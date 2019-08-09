@@ -1,5 +1,6 @@
 package com.cyy.day.controller;
 
+import com.cyy.day.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,6 @@ public class TestController {
     public Object success() {
         Map map = new HashMap();
         map.put("success", "获取数据成功！");
-        return map;
+        return ResponseUtil.ok("获取数据成功！");
     }
 }
