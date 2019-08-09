@@ -17,7 +17,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             return true;
         } else {
             //校验登陆
-            throw new LoginException(4001,"没有登陆",LoginInterceptor.class+"=>preHandle()");
+            throw new LoginException(4001,"没有登陆",null);
         }
     }
 
